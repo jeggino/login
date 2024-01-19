@@ -3,11 +3,11 @@ credentials:
     jsmith:
       email: jsmith@gmail.com
       name: John Smith
-      password: # Placeholder for hashed password of 'abc'
+      password: 'abc'
     rbriggs:
       email: rbriggs@gmail.com
       name: Rebecca Briggs
-      password: # Placeholder for hashed password of 'def'
+      password: 'def'
 cookie:
   expiry_days: 0
   key: "Platinum79" # Must be string
@@ -15,3 +15,5 @@ cookie:
 preauthorized:
   emails:
   - jeggino@gmail.com
+
+hashed_passwords = stauth.Hasher(['abc', 'def']).generate()

@@ -5,8 +5,6 @@ import streamlit_authenticator as stauth
 
 
 
-# hashed_passwords = Hasher(['abc', 'def']).generate()
-
 # Loading config file
 with open('config.yaml') as file:
     config = yaml.load(file, Loader=SafeLoader)
@@ -21,9 +19,9 @@ authenticator = stauth.Authenticate(
 )
 
 # creating a login widget
-authenticator.login('Login', 'main')
+authenticator.login('trhw', 'main')
 if st.session_state["authentication_status"]:
-    # authenticator.logout('Logout', 'main')
+    authenticator.logout('Logout', 'main')
     st.write(f'Welcome *{st.session_state["name"]}*')
     st.title('Some content')
 elif st.session_state["authentication_status"] is False:

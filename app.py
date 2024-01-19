@@ -4,6 +4,7 @@ import yaml
 from yaml.loader import SafeLoader
 
 
+hashed_passwords = stauth.Hasher(['abc', 'def']).generate()
 
 with open('config.yaml') as file:
     config = yaml.load(file, Loader=SafeLoader)

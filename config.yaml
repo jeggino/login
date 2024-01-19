@@ -7,7 +7,7 @@ credentials:
     dbaldwin:
       email: dbaldwin@gmail.com
       name: David Baldwin
-      password: $2b$12$E9/bCaN/r8sN/FV2l8NpgOgspUBAp7UAVU6BgsXJzp/pW8gQWCprC
+      password: ciao
     jsmith:
       email: jsmith@gmail.com
       name: John Smith

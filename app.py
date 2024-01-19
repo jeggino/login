@@ -19,7 +19,7 @@ authenticator = stauth.Authenticate(
 )
 
 # creating a login widget
-authenticator.login('', 'main')
+authenticator.login('', 'sidebar')
 if st.session_state["authentication_status"]:
     authenticator.logout('Logout', 'main')
     st.write(f'Welcome *{st.session_state["name"]}*')

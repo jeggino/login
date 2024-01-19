@@ -16,4 +16,3 @@ preauthorized:
   emails:
   - jeggino@gmail.com
 
-hashed_passwords = stauth.Hasher(['abc', 'def']).generate()

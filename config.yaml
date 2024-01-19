@@ -21,5 +21,4 @@ credentials:
       name: Ross Couper
       password: $2b$12$Tir/PbHVmmnt5kgNxgOwMuxNIb2fv2pJ.q71TW8ekvbugCqkye4yu
 preauthorized:
-  emails:
-  - melsby@gmail.com
+  emails: melsby@gmail.com

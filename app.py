@@ -31,11 +31,11 @@ id_input = st.text_input(
         "Enter some text 👇",
     )
 
-password_input = st.text_input(
+id_input_2 = st.text_input(
         "Enter some text 👇",
     )
 
-if dict[id_input] == password_input:
+if dict[id_input] == id_input_2:
     st.write('hi')
 else:
     st.write('no')

@@ -1,5 +1,5 @@
 import streamlit as st
-import .credencials
+import credencials
 
 dict = {
     "roberto":'ciao',

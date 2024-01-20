@@ -31,7 +31,7 @@ dict = {
 }
 
 id_input = st.text_input( "Enter some text 👇",value="")
-id_input_2 = st.text_input( "Enter some text 👇",value="")
+id_input_2 = st.text_input( "Enter some text 👇",type="password")
 
 if dict[id_input] == id_input_2:
     st.write('hi')

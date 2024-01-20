@@ -25,13 +25,16 @@ import streamlit as st
 # elif st.session_state["authentication_status"] is None:
 #     st.warning('Please enter your username and password')
 
-dict={"roberto":'ciao','cosimo':'peccato'}
+dict = {
+    "roberto":'ciao',
+    'cosimo':'peccato'
+}
 
 id_input = st.text_input( "Enter some text 👇")
-
-id_input_2 = st.text_input("Enter some text 👇")
+id_input_2 = st.text_input( "Enter some text 👇")
 
 if dict[id_input] == id_input_2:
     st.write('hi')
+    
 else:
     st.write('no')

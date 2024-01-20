@@ -1,10 +1,10 @@
 import streamlit as st
 import credencials
 
-dict = {
-    "roberto":'ciao',
-    'cosimo':'peccato'
-}
+# dict = {
+#     "roberto":'ciao',
+#     'cosimo':'peccato'
+# }
 dict_keys = dict.keys()
 
 

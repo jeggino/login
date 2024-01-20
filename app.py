@@ -25,7 +25,7 @@ import streamlit as st
 # elif st.session_state["authentication_status"] is None:
 #     st.warning('Please enter your username and password')
 
-import credentials
+import credencials
 
 id_input = st.text_input(
         "Enter some text 👇",

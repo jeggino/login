@@ -28,8 +28,8 @@ import altair as alt
 source = df.groupby("sciName",as_index=False).size()
 
 base = alt.Chart(source).encode(
-    x='sciName',
-    y="size",
+    x='size',
+    y="sciName",
     text='size'
 )
 

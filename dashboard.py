@@ -23,3 +23,5 @@ db = deta.Base("elskenecologie_2024-db")
 
 db_content = db.fetch().items
 st.dataframe(db_content)
+
+"---"

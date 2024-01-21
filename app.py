@@ -18,28 +18,9 @@ from geopy.geocoders import Nominatim
 df = pd.read_csv(uploaded_file)
 
 geolocator = Nominatim(user_agent="user_agent")
-df['addrees'] = df['addrees'] + " " + df['city']
-df['lat'] = df['addrees'].apply(lambda x: geolocator.geocode(x).latitude)
-df['lng'] = df['addrees'].apply(lambda x: geolocator.geocode(x).longitude)
+df['Adres'] = df['Adres'] + " " + df['Stad']
+df['lat'] = df['Adres'].apply(lambda x: geolocator.geocode(x).latitude)
+df['lng'] = df['Adres'].apply(lambda x: geolocator.geocode(x).longitude)
 
 st.dataframe(df)
 
-st.map(df,
-    latitude='lat',
-    longitude='lng',
-       size=1
-      )
-
-
-import altair as alt
-
-source = df.groupby("species",as_index=False).size()
-
-base = alt.Chart(source).encode(
-    x='size',
-    y="species",
-    text='size'
-).mark_bar()
-
-
-st.altair_chart(base, use_container_width=True, theme=None)

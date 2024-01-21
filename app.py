@@ -12,7 +12,8 @@ if uploaded_file is None:
         st.stop()
 
 import pandas as pd
+
 df = pd.read_csv(uploaded_file)
-df['operator'] = login()
+df['operator'] = name
 st.dataframe(df)
 

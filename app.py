@@ -16,6 +16,5 @@ if uploaded_file is None:
 import pandas as pd
 
 df = pd.read_csv(uploaded_file)
-df['operator'] = name
 st.dataframe(df)
 

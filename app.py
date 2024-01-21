@@ -14,15 +14,20 @@ if uploaded_file is None:
         st.stop()
 
 import pandas as pd
-import pandas_profiling
-from streamlit_pandas_profiling import st_profile_report
+import streamlit_pandas as sp
 
 
 
 df = pd.read_csv(uploaded_file)
+all_widgets = sp.create_widgets(df, create_data, ignore_columns=["PassengerId"])
+res = sp.filter_df(df, all_widgets)
+
+st.title("Streamlit AutoPandas")
+st.header("Original DataFrame")
 st.dataframe(df)
-pr = df.profile_report()
-st_profile_report(pr)
+
+st.header("Result DataFrame")
+st.dataframe(res)
 
 st.map(df,
     latitude='lat',

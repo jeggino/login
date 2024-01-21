@@ -18,6 +18,7 @@ from geopy.geocoders import Nominatim
 df = pd.read_csv(uploaded_file)
 
 geolocator = Nominatim(user_agent="user_agent")
+df_updated['addrees'] = df_updated['addrees'] + " " + df_updated['city']
 df['lat'] = df['addrees'].apply(lambda x: geolocator.geocode(x).latitude)
 df['lng'] = df['addrees'].apply(lambda x: geolocator.geocode(x).longitude)
 

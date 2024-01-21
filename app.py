@@ -15,6 +15,11 @@ if uploaded_file is None:
 import pandas as pd
 
 df = pd.read_csv(uploaded_file)
+
+geolocator = Nominatim(user_agent="user_agent")
+df['lat'] = df['addrees'].apply(lambda x: geolocator.geocode(x).latitude)
+df['lng'] = df['addrees'].apply(lambda x: geolocator.geocode(x).longitude)
+
 st.dataframe(df)
 
 st.map(df,
@@ -25,11 +30,11 @@ st.map(df,
 
 import altair as alt
 
-source = df.groupby("sciName",as_index=False).size()
+source = df.groupby("species",as_index=False).size()
 
 base = alt.Chart(source).encode(
     x='size',
-    y="sciName",
+    y="species",
     text='size'
 ).mark_bar()
 

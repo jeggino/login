@@ -1,6 +1,6 @@
 dict = {
-  'roberto': {'name': 'Roberto Caruso',
-              'password':'ciao'},
-  'cosimo' : {'name': 'Cosimo attanasio',
-             'password': 'ceppo'}
+  'daan@elskenecologie.nl': {'name': 'Daan',
+              'password':'elskenecologie_2024'},
+  'jeggino@gmail.com' : {'name': 'Luigi',
+             'password': 'elskenecologie_2024'}
 }

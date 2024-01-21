@@ -4,6 +4,7 @@ from credencials import dict
 
 @st.cache_resource(experimental_allow_widgets=True)
 def login():
+  
   placeholder = st.empty()
   container =  placeholder.container(height=None, border=True)
   id_input = container.text_input( "Enter your user name here",value="")
@@ -15,7 +16,6 @@ def login():
           if dict[id_input]['password'] == id_input_2:
               placeholder.empty()
               st.title(f"HI :blue[{dict[id_input]['name']}]")
-              name = dict[id_input]['name']
                             
           else:
               container.write('Password incorrect')

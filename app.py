@@ -13,6 +13,6 @@ if uploaded_file is None:
 
 import pandas as pd
 df = pd.read_csv(uploaded_file)
-df['operator'] = f"{dict[id_input]['name']}"
+df['operator'] = login()
 st.dataframe(df)
 

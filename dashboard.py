@@ -11,7 +11,7 @@ if st.button("Logout"):
 
 from deta import Deta
 
-data_key = "a0eengonb7b_UCVkWd6CJS5ccGoKFzNCYj6UnMeRcF5Y"
+data_key = "a0wjgvwqjle_qGyGFkc1ZEkNkjGmRxKnxecr7DfvxonW"
 
 # Connect to Deta Base with your Data Key
 deta = Deta(data_key)

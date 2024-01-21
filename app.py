@@ -10,24 +10,12 @@ if st.button("Logout"):
 uploaded_file = st.file_uploader("")
 
 if uploaded_file is None:
-        
         st.stop()
 
 import pandas as pd
-import streamlit_pandas as sp
-
-
 
 df = pd.read_csv(uploaded_file)
-all_widgets = sp.create_widgets(df, create_data, ignore_columns=["PassengerId"])
-res = sp.filter_df(df, all_widgets)
-
-st.title("Streamlit AutoPandas")
-st.header("Original DataFrame")
 st.dataframe(df)
-
-st.header("Result DataFrame")
-st.dataframe(res)
 
 st.map(df,
     latitude='lat',

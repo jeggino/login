@@ -17,6 +17,8 @@ if uploaded_file is None:
 import pandas as pd
 from geopy.geocoders import Nominatim
 
+bytes_data = uploaded_file.getvalue()
+st.write(bytes_data)
 df = pd.read_csv(uploaded_file)
 
 geolocator = Nominatim(user_agent="user_agent")

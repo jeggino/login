@@ -12,6 +12,8 @@ if container.button('Login'):
         if dict[id_input]['password'] == id_input_2:
             placeholder.empty()
             st.write(f"Hi {dict[id_input]['name']}")
+            if st.button("Logout"):
+                st.rerun()
             
         else:
             container.write('Password incorrect')

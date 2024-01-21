@@ -2,6 +2,10 @@ import streamlit as st
 from log_fun import *
 
 login()
+
+if st.button("Logout"):
+        st.cache_resource.clear()
+        st.rerun()
         
 with st.sidebar:
         genre = st.radio("What's your favorite movie genre",

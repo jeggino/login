@@ -49,8 +49,8 @@ db = deta.Base("elskenecologie_2024-db")
 # write the data from the form to the database.
 # You can store any data you want here. Just modify that dictionary below (the entries between the {}).
 if submitted:
-        for row in df.to_dict('records')
-            db.put(row)
+        for row in df.to_dict('records'):
+                db.put(row)
 
 "---"
 "Here's everything stored in the database:"

@@ -31,7 +31,7 @@ base = alt.Chart(source).encode(
     x='size',
     y="sciName",
     text='size'
-)
+).mark_bar()
 
-base.mark_bar() + base.mark_text(align='left', dx=2)
 
+st.altair_chart(base, use_container_width=True, theme=None)

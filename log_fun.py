@@ -1,7 +1,7 @@
 import streamlit as st
 from credencials import dict
 
-@st.cache_resource
+@st.cache_resource(experimental_allow_widgets=True)
 def login():
   placeholder = st.empty()
   container =  placeholder.container(height=None, border=True)

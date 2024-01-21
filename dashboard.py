@@ -23,5 +23,6 @@ db = deta.Base("df_eBird")
 
 db_content = db.fetch().items
 st.dataframe(db_content)
+st.write(len(db_content))
 
 "---"

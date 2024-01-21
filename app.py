@@ -26,7 +26,8 @@ st.dataframe(df)
 
 st.map(df,
     latitude='lat',
-    longitude='lng'
+    longitude='lng',
+       size=1
       )
 
 

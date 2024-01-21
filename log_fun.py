@@ -2,7 +2,7 @@ import streamlit as st
 from credencials import dict
 
 
-@st.cache_resource
+@st.cache_resource(experimental_allow_widgets=True)
 def login():
   placeholder = st.empty()
   container =  placeholder.container(height=None, border=True)
@@ -27,11 +27,3 @@ def login():
           st.stop()
   else:
     st.stop()
-
-  genre = st.radio(
-      "What's your favorite movie genre",
-      [":rainbow[Comedy]", "***Drama***", "Documentary :movie_camera:"],
-      captions = ["Laugh out loud.", "Get the popcorn.", "Never stop learning."])
-  
-  
-  st.write(f'You selected {genre}.')

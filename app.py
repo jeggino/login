@@ -34,6 +34,6 @@ st.data_editor(
     hide_index=True,
 )
 
-df = pd.DataFrame(uploaded_file)
+df = pd.read_csv(uploaded_file)
 st.dataframe(df)
 

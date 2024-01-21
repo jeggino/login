@@ -8,8 +8,8 @@ with st.container(height=None, border=True):
     if st.button('Login'):
         if id_input in dict.keys():
             
-            if dict[id_input] == id_input_2:
-                st.write('hi')
+            if dict[id_input]['password'] == id_input_2:
+                st.write(f'{dict[id_input]['name']}')
                 
             else:
                 st.write('Password incorrect')

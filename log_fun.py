@@ -14,11 +14,7 @@ def login():
           
           if dict[id_input]['password'] == id_input_2:
               placeholder.empty()
-              
               st.title(f"HI :blue[{dict[id_input]['name']}]")
-              if st.button("Logout"):
-                st.cache_resource.clear()
-                st.rerun()
                             
           else:
               container.write('Password incorrect')
@@ -28,3 +24,7 @@ def login():
           st.stop()
   else:
     st.stop()
+
+  if st.button("Logout"):
+    st.cache_resource.clear()
+    st.rerun()

@@ -30,7 +30,7 @@ df['lng'] = df['Adres'].apply(lambda x: geolocator.geocode(x).longitude)
 #--------------
 from deta import Deta
 
-data_key = "a0ekeqcbs2m_kN32hbBkXeAfgHAGKsNj6fPoKTvbY7xf"
+data_key = "a0eengonb7b_UCVkWd6CJS5ccGoKFzNCYj6UnMeRcF5Y"
 
 # Data to be written to Deta Base
 with st.form("form"):

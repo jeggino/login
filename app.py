@@ -14,14 +14,21 @@ if uploaded_file is None:
         st.stop()
 
 import pandas as pd
+import pandas_profiling
+from streamlit_pandas_profiling import st_profile_report
+
+
 
 df = pd.read_csv(uploaded_file)
 st.dataframe(df)
+pr = df.profile_report()
+st_profile_report(pr)
 
 st.map(df,
     latitude='lat',
     longitude='lng'
       )
+
 
 import altair as alt
 

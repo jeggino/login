@@ -33,3 +33,7 @@ st.data_editor(
     },
     hide_index=True,
 )
+
+df = pd.DataFrame(uploaded_file)
+st.dataframe(df)
+

@@ -13,6 +13,7 @@ if uploaded_file is None:
         st.stop()
 
 import pandas as pd
+from geopy.geocoders import Nominatim
 
 df = pd.read_csv(uploaded_file)
 

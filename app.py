@@ -11,10 +11,9 @@ if container.button('Login'):
         
         if dict[id_input]['password'] == id_input_2:
             placeholder.empty()
-            col1,col2 = st.columns(2)
-
-            col1.title(f"HI :blue[{dict[id_input]['name']}]")
-            if col2.button("Logout"):
+            
+            st.title(f"HI :blue[{dict[id_input]['name']}]")
+            if st.button("Logout"):
                 st.rerun()
             
         else:

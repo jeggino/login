@@ -8,7 +8,9 @@ if st.button("Logout"):
         st.rerun()
         
 uploaded_file = st.file_uploader("")
+
 if uploaded_file is None:
+        
         st.stop()
 
 import pandas as pd

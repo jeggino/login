@@ -17,7 +17,6 @@ if uploaded_file is None:
 import pandas as pd
 from geopy.geocoders import Nominatim
 
-bytes_data = uploaded_file.getvalue()
 try:
         df = pd.read_csv(uploaded_file)
 

@@ -1,7 +1,7 @@
 import streamlit as st
 from credencials import dict
 
-container =  st.container(height=None, border=True):
+container =  st.container(height=None, border=True)
 id_input = container.text_input( "Enter your user name here",value="")
 id_input_2 = container.text_input( "Enter your password here",type="password")
 

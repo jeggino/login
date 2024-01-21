@@ -15,7 +15,7 @@ def login():
           if dict[id_input]['password'] == id_input_2:
               placeholder.empty()
               st.title(f"HI :blue[{dict[id_input]['name']}]")
-              return dict[id_input]['name']
+              name = dict[id_input]['name']
                             
           else:
               container.write('Password incorrect')

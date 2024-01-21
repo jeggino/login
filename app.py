@@ -2,8 +2,8 @@ import streamlit as st
 from credencials import dict
 
 with st.container(height=None, border=True):
-    id_input = st.text_input( "Enter some text 👇",value="")
-    id_input_2 = st.text_input( "Enter some text 👇",type="password")
+    id_input = st.text_input( "Enter your user name here",value="")
+    id_input_2 = st.text_input( "Enter your password here",type="password")
 
     if st.button('Login'):
         if id_input in dict.keys():
@@ -12,6 +12,6 @@ with st.container(height=None, border=True):
                 st.write('hi')
                 
             else:
-                st.write('no')
+                st.write('Password incorrect')
         else:
-            st.write("scemo")
+            st.write("User name incorrect")

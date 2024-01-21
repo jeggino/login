@@ -11,7 +11,7 @@ if container.button('Login'):
         
         if dict[id_input]['password'] == id_input_2:
             placeholder.empty()
-            col1,col2 = st.columns()
+            col1,col2 = st.columns(2)
             col1.write(f"Hi {dict[id_input]['name']}")
             if st.button("Logout"):
                 col2.rerun()

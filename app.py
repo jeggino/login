@@ -17,3 +17,7 @@ if container.button('Login'):
     else:
         container.write("User name incorrect")
         st.stop()
+        
+message = st.chat_message("assistant")
+message.write("Hello human")
+

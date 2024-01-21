@@ -25,3 +25,7 @@ df['lng'] = df['Adres'].apply(lambda x: geolocator.geocode(x).longitude)
 
 st.dataframe(df)
 
+data_key = "a0ekeqcbs2m_kN32hbBkXeAfgHAGKsNj6fPoKTvbY7xf"
+
+
+

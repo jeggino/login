@@ -23,6 +23,10 @@ if container.button('Login'):
         container.write("User name incorrect")
         st.stop()
         
-    message = st.chat_message("assistant")
-    message.write("Hello human")
+    if st.button("Home"):
+        st.switch_page("app.py")
+    if st.button("Page 1"):
+        st.switch_page("pages/page_1.py")
+    if st.button("Page 2"):
+        st.switch_page("pages/page_2.py")
 

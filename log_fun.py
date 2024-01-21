@@ -25,6 +25,3 @@ def login():
   else:
     st.stop()
 
-  if st.button("Logout"):
-    st.cache_resource.clear()
-    st.rerun()

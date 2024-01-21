@@ -7,6 +7,14 @@ chart_data = pd.DataFrame(
    np.random.randn(1000, 2) / [50, 50] + [37.76, -122.4],
    columns=['lat', 'lon'])
 
+with st.sidebar:
+        genre = st.radio("What's your favorite movie genre",
+                         [":rainbow[cacca]", "***sciorda***", "pipí :movie_camera:"],
+                         captions = ["Laugh out loud.", "Get the popcorn.", "Never stop learning."])
+
+
+st.write(f'You selected {genre}.')
+
 st.pydeck_chart(pdk.Deck(
     map_style=None,
     initial_view_state=pdk.ViewState(

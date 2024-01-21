@@ -16,14 +16,6 @@ def login():
               st.title(f"HI :blue[{dict[id_input]['name']}]")
               if st.button("Logout"):
                   st.rerun()
-
-              genre = st.radio(
-                  "What's your favorite movie genre",
-                  [":rainbow[Comedy]", "***Drama***", "Documentary :movie_camera:"],
-                  captions = ["Laugh out loud.", "Get the popcorn.", "Never stop learning."])
-              
-              
-              st.write(f'You selected {genre}.')
                             
           else:
               container.write('Password incorrect')
@@ -31,3 +23,13 @@ def login():
       else:
           container.write("User name incorrect")
           st.stop()
+  else:
+    st.stop()
+
+  genre = st.radio(
+      "What's your favorite movie genre",
+      [":rainbow[Comedy]", "***Drama***", "Documentary :movie_camera:"],
+      captions = ["Laugh out loud.", "Get the popcorn.", "Never stop learning."])
+  
+  
+  st.write(f'You selected {genre}.')

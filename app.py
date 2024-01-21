@@ -13,5 +13,7 @@ if container.button('Login'):
             
         else:
             container.write('Password incorrect')
+            st.stop()
     else:
         container.write("User name incorrect")
+        st.stop()

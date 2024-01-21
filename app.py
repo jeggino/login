@@ -18,3 +18,8 @@ import pandas as pd
 df = pd.read_csv(uploaded_file)
 st.dataframe(df)
 
+st.map(df,
+    latitude='lat',
+    longitude='lng'
+      )
+

@@ -7,8 +7,7 @@ if st.button("Logout"):
         st.cache_resource.clear()
         st.rerun()
         
-st.sidebar.image("https://terschelling-cdn.travelbase.nl/image-transforms/logo/500x500/f30402d250ee0d24b57be8e69299e1f9.png")
-        
+       
 uploaded_file = st.file_uploader("")
 
 if uploaded_file is None:

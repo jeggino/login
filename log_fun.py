@@ -17,7 +17,8 @@ def login():
               
               st.title(f"HI :blue[{dict[id_input]['name']}]")
               if st.button("Logout"):
-                  st.rerun()
+                st.cache_resource.clear()
+                st.rerun()
                             
           else:
               container.write('Password incorrect')

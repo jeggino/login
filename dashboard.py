@@ -39,7 +39,7 @@ layer = pdk.Layer(
     radius_min_pixels=1,
     radius_max_pixels=100,
     line_width_min_pixels=1,
-    get_position=["lat","lng"],
+    get_position=["lng","lat"],
     get_fill_color=[255, 140, 0],
     get_line_color=[0, 0, 0],
 )

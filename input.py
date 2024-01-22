@@ -17,19 +17,13 @@ if uploaded_file is None:
 import pandas as pd
 from geopy.geocoders import Nominatim
 
-try:
-        df = pd.read_csv(uploaded_file)
+df = pd.read_csv(uploaded_file)
 
-except:
-        df = pd.read_excel(uploaded_file)
 
 geolocator = Nominatim(user_agent="user_agent")
 df['Adres'] = df['Adres'] + " " + df['Stad']
 df['lat'] = df['Adres'].apply(lambda x: geolocator.geocode(x).latitude)
 df['lng'] = df['Adres'].apply(lambda x: geolocator.geocode(x).longitude)
-
-
-
 
 #--------------
 from deta import Deta

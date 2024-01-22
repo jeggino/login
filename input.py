@@ -60,7 +60,7 @@ if submitted:
 "Here's everything stored in the database:"
 # This reads all items from the database and displays them to your app.
 # db_content is a list of dictionaries. You can do everything you want with it.
-db_content = db.fetch().items
+db_content = db.fetch(limit=None).items
 st.dataframe(db_content)
 
 

@@ -17,7 +17,7 @@ data_key = "a0wjgvwqjle_qGyGFkc1ZEkNkjGmRxKnxecr7DfvxonW"
 deta = Deta(data_key)
 
 
-db = deta.Base("df_eBird")
+db = deta.Base("elskenecologie_2024-db")
 
 "Here's everything stored in the database:"
 

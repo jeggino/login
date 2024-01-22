@@ -45,11 +45,11 @@ layer = pdk.Layer(
 )
 
 # Set the viewport location
-# view_state = pdk.ViewState(latitude=db_content["lat"].mean(), longitude=db_content["lng"].mean(), zoom=9, bearing=0, pitch=0)
+view_state = pdk.ViewState(latitude=52, longitude=4, zoom=9, bearing=0, pitch=0)
 
 # Render
 r = pdk.Deck(layers=[layer], 
-             # initial_view_state=view_state, 
+             initial_view_state=view_state, 
              # tooltip={"text": "{name}\n{address}"}
             )
 

@@ -21,7 +21,7 @@ db = deta.Base("df_eBird")
 
 "Here's everything stored in the database:"
 
-db_content = db.fetch().items
+db_content = db.fetch(limit=None).items
 st.dataframe(db_content)
 st.write(len(db_content))
 

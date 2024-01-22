@@ -25,3 +25,32 @@ db_content = db.fetch(limit=None).items
 st.dataframe(db_content)
 
 "---"
+import pydeck as pdk
+
+# Define a layer to display on a map
+layer = pdk.Layer(
+    "ScatterplotLayer",
+    db_content,
+    pickable=True,
+    opacity=0.8,
+    stroked=True,
+    filled=True,
+    radius_scale=6,
+    radius_min_pixels=1,
+    radius_max_pixels=100,
+    line_width_min_pixels=1,
+    get_position=["lat","lng"],
+    get_fill_color=[255, 140, 0],
+    get_line_color=[0, 0, 0],
+)
+
+# Set the viewport location
+# view_state = pdk.ViewState(latitude=37.7749295, longitude=-122.4194155, zoom=10, bearing=0, pitch=0)
+
+# Render
+r = pdk.Deck(layers=[layer], 
+             # initial_view_state=view_state, 
+             # tooltip={"text": "{name}\n{address}"}
+            )
+
+st.pydeck_chart(pydeck_obj=r, use_container_width=True)

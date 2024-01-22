@@ -23,6 +23,5 @@ db = deta.Base("elskenecologie_2024-db")
 
 db_content = db.fetch(limit=None).items
 st.dataframe(db_content)
-st.write(len(db_content))
 
 "---"

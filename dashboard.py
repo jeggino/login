@@ -36,7 +36,7 @@ layer = pdk.Layer(
     stroked=True,
     filled=True,
         radius_scale=60,
-    radius_min_pixels=1,
+    radius_min_pixels=10,
     radius_max_pixels=100,
     line_width_min_pixels=1,
     get_position=["lng","lat"],
@@ -45,7 +45,7 @@ layer = pdk.Layer(
 )
 
 # Set the viewport location
-view_state = pdk.ViewState(latitude=52, longitude=4, zoom=9, bearing=0, pitch=0)
+view_state = pdk.ViewState(latitude=52.2, longitude=4.2, zoom=9, bearing=0, pitch=0)
 
 # Render
 r = pdk.Deck(layers=[layer], 

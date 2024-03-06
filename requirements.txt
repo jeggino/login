@@ -1,2 +1,2 @@
 streamlit
-streamlit-login-auth-ui
+streamlit_login_auth_ui

@@ -3,7 +3,7 @@ credentials:
     jsmith:
       email: jeggino@gmail.com
       logged_in: True # Will be managed automatically
-      name: John Smith
+      name: Luigi
       password: Platinum_79 # Will be hashed automatically
     rbriggs:
       email: rbriggs@gmail.com

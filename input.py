@@ -17,7 +17,7 @@ authenticator = stauth.Authenticate(
 
 authenticator.login(location="sidebar")
 
-st.write(authenticator.login(location="sidebar"))
+st.write(st.session_state["name"])
 
 if st.session_state["authentication_status"]:
     authenticator.logout()

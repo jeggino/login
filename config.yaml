@@ -9,5 +9,11 @@ credentials:
       logged_in: False
       name: Luigi Giugliano
       password: Platinum_79
+
+    daan:
+      email: jeggino@gmail.com
+      logged_in: False
+      name: Daan
+      password: Daan_79
 preauthorized:
   emails: melsby@gmail.com

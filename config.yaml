@@ -10,5 +10,4 @@ credentials:
       name: Luigi Giugliano
       password: Platinum_79
 preauthorized:
-  emails:
-  - melsby@gmail.com
+  emails: melsby@gmail.com

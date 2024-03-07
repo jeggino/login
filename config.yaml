@@ -16,7 +16,7 @@ credentials:
       password: $2b$12$iWlVOac3uujRvTrXDi6wructXftKmo/GyQd6SMu5FmyX306kH.yFO
     rbriggs:
       email: rbriggs@gmail.com
-      logged_in: false
+      logged_in: False
       name: Rebecca Briggs
       password: abc
     rcouper:

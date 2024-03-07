@@ -18,7 +18,13 @@ authenticator = stauth.Authenticate(
 authenticator.login()
 
 
-if st.session_state["authentication_status"]:
+
+        
+if st.session_state["authentication_status"] is False:
+    st.error('Username/password is incorrect')
+elif st.session_state["authentication_status"] is None:
+    st.warning('Please enter your username and password')
+elif st.session_state["authentication_status"]:
     with open('config.yaml', 'w') as file:
         yaml.dump(config, file, default_flow_style=False)
     st.write(f'Welcome *{st.session_state["name"]}*')
@@ -26,11 +32,15 @@ if st.session_state["authentication_status"]:
 
     if agree:
         st.write('Great!')
-        
-elif st.session_state["authentication_status"] is False:
-    st.error('Username/password is incorrect')
-elif st.session_state["authentication_status"] is None:
-    st.warning('Please enter your username and password')
+
+    option = st.selectbox(
+       "How would you like to be contacted?",
+       ("Email", "Home phone", "Mobile phone"),
+       index=None,
+       placeholder="Select contact method...",
+    )
+
+    st.write('You selected:', option)
 
 
 

@@ -19,7 +19,6 @@ authenticator.login()
 
 
 if st.session_state["authentication_status"]:
-    authenticator.logout()
     with open('config.yaml', 'w') as file:
         yaml.dump(config, file, default_flow_style=False)
     st.write(f'Welcome *{st.session_state["name"]}*')
